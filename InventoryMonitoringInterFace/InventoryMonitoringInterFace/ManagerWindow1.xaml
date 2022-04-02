@@ -1,0 +1,43 @@
+﻿<Window x:Class="InventoryMonitoringInterFace.ManagerWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryMonitoringInterFace"
+        mc:Ignorable="d"
+        Title="Inventory Monitoring Interface" FontFamily="Bauhaus 93" Height="560" Width="800">
+    <Grid Background="#FFC6CBCD" OpacityMask="Black">
+        <Label x:Name="productName_label" Content="Product Name" HorizontalAlignment="Left" Margin="26,23,0,0" VerticalAlignment="Top" FontFamily="Candara" FontSize="18" FontWeight="ExtraBlack" Width="121"/>
+        <Label x:Name="quantity_label" Content="Quantity" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Height="32" Width="121" FontFamily="Candara" FontSize="18" FontWeight="ExtraBlack"/>
+        <Label x:Name="category_label" Content="Category" HorizontalAlignment="Left" Margin="317,61,0,0" VerticalAlignment="Top" FontFamily="Candara" FontSize="18" FontWeight="ExtraBlack"/>
+        <TextBox x:Name="productName_textBox" HorizontalAlignment="Left" Height="32" Margin="152,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="Transparent" BorderBrush="Black" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBox x:Name="quantity_textBox" HorizontalAlignment="Left" Height="32" Margin="152,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Transparent" BorderBrush="Black" FontFamily="Times New Roman" FontSize="16"/>
+        <ComboBox x:Name="category_combobox" HorizontalAlignment="Left" Margin="414,64,0,0" VerticalAlignment="Top" Width="141" Background="Transparent" BorderBrush="Transparent" FontSize="13" FontFamily="Candara" FontWeight="Bold" Height="28">
+            <ComboBoxItem Content="Accesories" HorizontalAlignment="Left" Width="139.2" FontFamily="Candara" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Baby Food &amp; Care" HorizontalAlignment="Left" Width="139.2" FontFamily="Candara" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Chocolates &amp; Candies" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Fruits &amp; Vegetables" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Drinks" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Fashion / Lifestyle" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Household Items" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Ice-Cream" HorizontalAlignment="Left" Width="139.2" FontSize="13" FontWeight="Bold"/>
+            <ComboBoxItem Content="Personal Care" HorizontalAlignment="Left" Width="139.2"/>
+            <ComboBoxItem Content="Electronics" HorizontalAlignment="Left" Width="139.2"/>
+        </ComboBox>
+        <Button x:Name="insert_btn" Content="Insert" HorizontalAlignment="Left" Margin="33,188,0,0" VerticalAlignment="Top" Width="75" FontFamily="Candara" FontSize="18" FontWeight="Heavy" Click="insert_btn_Click"/>
+        <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="225,188,0,0" VerticalAlignment="Top" Width="75" Height="25" FontFamily="Candara" FontSize="18" FontWeight="Heavy" Click="delete_btn_Click"/>
+        <Button x:Name="update_btn" Content="Update" HorizontalAlignment="Left" Margin="130,188,0,0" VerticalAlignment="Top" Width="75" Height="25" FontFamily="Candara" FontSize="18" FontWeight="Heavy" Click="update_btn_Click"/>
+        <Button x:Name="viewAll_btn" Content="View All" HorizontalAlignment="Left" Margin="322,188,0,0" VerticalAlignment="Top" Width="75" Height="25" FontFamily="Candara" FontSize="18" FontWeight="Heavy" Click="viewAll_btn_Click"/>
+        <Button x:Name="logout_btn" Content="Logout" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="75" Height="24" Background="Red" FontFamily="Candara" FontSize="18" Opacity="0.8" Click="logout_btn_Click"/>
+        <Viewbox HorizontalAlignment="Left" Height="280" Margin="33,236,0,0" VerticalAlignment="Top" Width="552" Stretch="Fill">
+            <DataGrid x:Name="manager1_dataGridView" SelectionMode="Single" AutoGenerateColumns="True" CanUserAddRows="True" ColumnWidth="*" FontFamily="Times New Roman" FontSize="12" IsReadOnly="True" Background="#FFCBB3B3" BorderBrush="Transparent" Height="280" Width="636" SelectionChanged="manager1_dataGridView_SelectionChanged"/>
+        </Viewbox>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="24,94,0,0" VerticalAlignment="Top" Height="32" Width="57" FontFamily="Candara" FontSize="18" FontWeight="ExtraBlack"/>
+        <TextBox x:Name="price_textBox" HorizontalAlignment="Left" Height="32" Margin="152,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Transparent" FontFamily="Times New Roman" FontSize="16" BorderBrush="Black"/>
+        <Label  x:Name="productId_label" Content="Product ID" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="121" Visibility="Hidden" FontFamily="Candara" FontSize="18" FontWeight="ExtraBlack"/>
+        <TextBox x:Name="productId_textBox" HorizontalAlignment="Left" Height="32" Margin="146,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Transparent" IsReadOnly="True" Visibility="Hidden" BorderBrush="Black" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="search_btn" Content="Search" HorizontalAlignment="Left" Margin="414,23,0,0" VerticalAlignment="Top" Width="75" Height="25" FontFamily="Candara" FontSize="18" FontWeight="Heavy" Click="search_btn_Click"/>
+        <Button x:Name="RegUser_btn" Content="Register User" HorizontalAlignment="Left" Margin="667,59,0,0" VerticalAlignment="Top" Width="117" FontFamily="Candara" FontSize="18" Height="32" Click="RegUser_btn_Click"/>
+
+    </Grid>
+</Window>
